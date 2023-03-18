@@ -115,8 +115,6 @@ Logistics Regression Confusion Matrix plot
 Logistics Regression ROC
 <img src="./images/logroc.png"></img>
 
-
-
 ### Random Forest with Word2Vec
 
 Binary Classification Model Scores for Random Forest with Word2Vec:
@@ -131,37 +129,47 @@ Random Forest with Word2Vec ROC
 
 ### Overall Confusion Matrix Analysis
 
-<img src="./images/cmall.png"></img>
+<img src="./images/nbrf.png"></img>
+
+<img src="./images/logrfw2v.png"></img>
 
 Naive-Bayes model may be overly biased towards predicting Yoga posts, leading to an increased number of False Positives. This means that the model is incorrectly classifying some Gym posts as Yoga posts, which could be problematic in this NLP binary classification case.
 
 For the Random Forest Classifier model, there is an increased in the False Negatives as compared to the Naive-Bayes model. This model is not so good in identifying Gym posts as compared to the Naive-Bayes.
 
-For the Random Forest Classifier with Word2Vec model, the False Negatives is lesser to the Random Forest model but higher than the Naive-Bayes model. It is not so good in predicting Gym posts as compared to the Naive-Bayes model. But the False Positives is teh lowest among the three models, so the Random Forest Classifier with Word2Vec model is better at predicting Yoga posts.
+For the Logistics Regression model, there is an increased in the False Negatives as compared to the Naive-Bayes model. This model is not so good in identifying Gym posts as compared to the Naive-Bayes. The Confusion Matrix Display for Logistics Regression is similar to Random Forest Classifier.
+
+For the Random Forest Classifier with Word2Vec model, the False Negatives is lesser to the Random Forest model but higher than the Naive-Bayes model and slightly higher than Logistics Regression. It is not so good in predicting Gym posts as compared to the Naive-Bayes model. But the False Positives is the  lowest among the three models, so the Random Forest Classifier with Word2Vec model is better at predicting Yoga posts.
 
 ## Conclusions
 
 <img src="./images/overallauc.png"></img>
 
-Based on the provided evaluation metrics table, the Random Forest model with Words2Vec embedding has the highest for specificity and F1 score, and the AUC is considered very good for the model. The recall score for Random Forest Classifier with Word2Vec model lies between Naive-Bayes and Random Forest models. Therefore, it can be concluded that this model is the best performing model among the three models evaluated. From the Random Forest with Word2Vec Confusion Matrix display, it can be seen that the False Positives and False Negatives are more evnly spread out as compared to Naive_Bayes. The Random Forest with Word2Vec model has lower False Positives and False Negatives as compared to the Random Forest model.
+Based on the provided evaluation metrics table, the Random Forest model with Words2Vec embedding has the highest for specificity and F1 score, and the AUC is considered very good for the model. 
 
-The Random Forest Classifier with Word2Vec model is able to distinguish posts that are yoga-related or gym -related. With this classification ability, Finesse Fit Solutions can aid Gyms and Yoga Studios to send the correct marketing materials to the appropriate Reddit users.
+The recall score for Random Forest Classifier with Word2Vec model is similar to Random Forest Classifier and Logistics Regression, but it's much lower as compared to Naive-Bayes model. But, Naive-Bayes model is heavily biased in predicting Yoga posts.
+
+The Random Forest with Word2Vec model has lower False Positives and False Negatives as compared to the Random Forest model. The Random Forest with Word2Vec model has lower False Positives and similar False Negatives as compared to the Logistics Regression model.
+
+Therefore, it can be concluded that this model is the best performing model among the four models evaluated. 
+
+Referring back to the Problem Statement, the Random Forest Classifier with Word2Vec model is able to distinguish posts that are yoga-related or gym-related. Therefore with this model's classification ability, Finesse Fit Solutions can use it to aid Gyms and Yoga Studios to send the correct marketing materials to the appropriate Reddit users.
 
 ## Recommendations
 
-The classification model could be used to help businesses in the fitness industry understand their customers better. For example, a gym or yoga studio owner could use the program to analyze feedback from their customers and see what aspects of their services are most appreciated. They could then use this information to improve their offerings and attract more customers.
+The Random Forest with Word2Vec classification model could be used to help businesses in the fitness industry understand their customers better. For example, a gym or yoga studio owner could use the program to analyze feedback from their customers and see what aspects of their services are most appreciated. They could then use this information to improve their offerings and attract more customers.
 
 For Gym posts:
 
-- The most common types of protein shakes or bars that are mentioned in the Gym posts. This can provide insights into the preferences and interests of the Gym community and can be used by nutrition companies to develop new products or marketing strategies.
-- The sentiment of the Gym posts related to protein shakes or bars. This can provide insights into the attitudes and opinions of the Gym community towards these supplements and can be used to identify potential issues or concerns.
-- The type of Gym accessories required such as wrist straps or weightlifting belts being discussed. This can provide insights into identifying what are the common brands of gym accessories being used in the Gym, and how we can work with the gym accessories seller and disseminate any Gym accessories promotional offers to the adequate Gym audience.
+- The most common types of protein shakes or bars that are mentioned in the Gym posts, and can be used by nutrition companies to develop new products or marketing strategies.
+- The sentiment of the Gym posts related to protein shakes or bars provide insights into the attitudes and opinions of the Gym community towards these supplements and can be used to identify potential issues or concerns.
+- The type of Gym accessories required such as wrist straps or weightlifting belts being discussed provide insights into identifying what are the common brands of gym accessories being used in the Gym, and use this information to work with the gym accessories seller and disseminate any Gym accessories promotional offers to the adequate Gym audience.
 
 For Yoga posts:
 
-- Identify the most popular or commonly discussed yoga practices or techniques. This can provide insights into the interests and preferences of the Yoga community and can be used to develop new classes, workshops, or training programs.
-- Analyze the sentiment of the Yoga posts related to different yoga practices or techniques. This can provide insights into the attitudes and opinions of the Yoga community towards these practices and can be used to identify potential issues or concerns.
-- Extract information about the most common yoga-related products, such as mats, blocks, and straps. This can provide insights into the preferences and purchasing habits of the Yoga community and can be used by companies to develop new products or marketing strategies.
-- Analyze the frequency of discussions or questions related to meditation or mindfulness practices. This can indicate the importance of these practices for the Yoga community and can be used to identify potential knowledge gaps or areas where more information is needed.
+- Identify the most popular or commonly discussed yoga practices or techniques. Yoga Studios can use this information to develop new classes, workshops, or training programs.
+- Analyze the sentiment of the Yoga posts can provide insights into the attitudes and opinions of the Yoga community towards different yoga practices and can be used to identify potential issues or concerns.
+- Extract information about the most common yoga-related products, such as mats, blocks, and straps. This can be used by companies to develop new products or marketing strategies.
+- Analyze the frequency of discussions or questions related to meditation or mindfulness practices to have a better understanding of the importance of these practices for the Yoga community.
 
-The model can be used to filter or categorize new posts automatically for any other social platforms besides Reddit. For example, if a social media platform or a fitness website allows users to post content related to Gym or Yoga, the model can be integrated to automatically categorize the posts and ensure that they are displayed to the relevant audience.
+The model can be used to filter or categorize new posts automatically for any other social platforms besides Reddit. 
