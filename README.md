@@ -71,11 +71,20 @@ yg_gym dataframe
 1. Tokenization the all the comments in yg_gym.
 2. Lemmatization all the token words in yg_gym.
 3. TfidfVectorizer the tokenized/lennatized words.
+
 <img src="./images/tfidf.png"></img>
 
-**Note** Word2Vec is applied to the third classification model before TfidfVectorizer (Random Forest with Word2Vec)
+**Note** Word2Vec is applied to the fourth classification model before TfidfVectorizer (Random Forest with Word2Vec)
 
 ## Modeling
+
+Four Machine Learning models will be used here to classify the tokenized/lemmatized posts. And we will see the model performance metrics score, Confusion Matrix Display and the ROC curve to determine which is the best performing model.
+
+The models used are:
+- Multinomial Naive-Bayes
+- Random forest Classifier
+- Logistics Regression
+- Random Forest Classifier with Word2Vec Embedding
 
 ### Naive-Bayes
 <img src="./images/naivebayes.png"></img>
