@@ -2,9 +2,11 @@
 
 The pandemic has had a significant impact on Gyms and Yoga studios, leading to decreased revenue and increased competition from virtual classes. The rising inflation costs also affect the sustainability of the Gyms and Yoga Studios
 
-As these businesses begin to recover with the loosening of the Covid restrictions, the owners of Gyms and Yogo Studios need to innovate their marketing efforts to attract new and old members, and social media advertising is a promising avenue. However, it can be challenging to send the correct marketing ads to the appropriate audience without accurate classification of gym and yoga-related posts on social media platforms such as Reddit.
+As these businesses begin to recover with the loosening of the Covid restrictions, the owners of Gyms and Yogo Studios need to innovate their marketing efforts to attract new and old members, and social media advertising is a promising avenue. 
 
-We need to find good classification methods that accurately distinguish these posts, and send correct targeted ads to the appropriate audience.
+However, the problem is that it can be challenging to send the correct marketing ads to the appropriate audience without accurate classification of gym and yoga-related posts on social media platforms such as Reddit.
+
+Hence, we need to find good classification methods that accurately distinguish these posts, and send correct targeted ads to the appropriate audience.
 
 
 ## Overview
@@ -100,6 +102,20 @@ Random Forest Confusion Matrix plot
 
 Random Forest ROC
 <img src="./images/rfroc.png"></img>
+
+### Logistics Regression
+
+Binary Classification Model Scores for Logistics Regression:
+
+<img src="./images/logscores.png"></img>
+
+Logistics Regression Confusion Matrix plot
+<img src="./images/logcm.png"></img>
+
+Logistics Regression ROC
+<img src="./images/logroc.png"></img>
+
+
 
 ### Random Forest with Word2Vec
 
